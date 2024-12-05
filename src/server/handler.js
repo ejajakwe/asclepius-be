@@ -32,7 +32,7 @@ async function postPredict(request, h) {
 
 async function getPredictHistories(request, h) {
     const db = new Firestore({databaseId: 'submission-db'});
-    const predictCollection = db.collection('prediction');
+    const predictCollection = db.collection('predictions');
     const predictSnapshot = await predictCollection.get();
 
     const data = [];
